@@ -1,6 +1,6 @@
 const mongoose = require("mongoose");
 
-const testschema = mongoose.Schema({
+const userschema = mongoose.Schema({
     FirstName :{ 
         type :String,
     require : true
@@ -15,18 +15,18 @@ const testschema = mongoose.Schema({
     unique: true
 },
     CIN :{ 
-        type : String,
+        type : Number,
     require : true,
     unique: true
     },
     Num :{ 
-        type : String ,
+        type : Number ,
     require : true,
     unique: true
     }
 
 });
-const Test = mongoose.model("test",testschema);
-module.exports = Test;
+const user = mongoose.model("user",userschema);
+module.exports = user;
 
 
